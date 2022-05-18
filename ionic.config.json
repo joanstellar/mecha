@@ -1,0 +1,7 @@
+{
+  "name": "mecha",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
