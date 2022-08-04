@@ -1,0 +1,52 @@
+<ion-card>
+  <ion-card-header class="header">
+    <div class="header-data">
+      <ion-card-subtitle>Welcome Student</ion-card-subtitle>
+      <ion-card-title>{{mecha.name}}</ion-card-title>
+    </div>
+    <div class="header-energy">
+      <ion-label class="mech mech-energy">{{mecha.MP}}</ion-label>
+      <div class="mech mech-energy-txt">energy</div>
+    </div>
+  </ion-card-header>
+  <ion-card-content>
+    <div class="ready-message">
+      Your mech is ready.
+    </div>
+    <div>
+      <ion-label class="mech mech-health">health: {{lastEmittedValueHP}}</ion-label>
+      <ion-range min="{{minhp}}"  max="{{mecha.HP}}" value="{{mecha.HP}}" (ionChange)="onIonChangeHP($event)"></ion-range>
+    </div>
+    <div> 
+      <!-- <ion-range min="{{minmp}}"  max="{{mecha.MP}}" value="{{mecha.MP}}" (ionChange)="onIonChangeMP($event)"></ion-range> -->
+    </div>
+  </ion-card-content>
+</ion-card>
+
+<ion-card *ngIf="powerSelected">
+  <ion-card-content class="power">
+    <div class="power-icon"><ion-icon name="{{selectedPowerIcon}}"></ion-icon></div>
+    <div class="power-name">{{powerName}}</div>
+    <div class="power-descritpion">{{powerDesc}}</div>
+    <ion-button class="ion-margin" (click)="launch()" expand="block" fill="outline" shape="round">
+      Launch
+    </ion-button>
+  </ion-card-content>
+</ion-card>
+
+<ion-fab vertical="bottom" horizontal="center" slot="fixed">
+  <ion-fab-button>
+    <ion-icon name="finger-print-outline"></ion-icon>
+  </ion-fab-button>
+
+  <ion-fab-list side="top">
+    <ion-fab-button color="facebook" (click)="getPower1()"><ion-icon name="{{icon1}}"></ion-icon></ion-fab-button>
+  </ion-fab-list>
+  <ion-fab-list side="start">
+    <ion-fab-button color="google" (click)="getPower2()"><ion-icon name="{{icon2}}"></ion-icon></ion-fab-button>
+  </ion-fab-list>
+  <ion-fab-list side="end">
+    <ion-fab-button color="google" (click)="getPower3()"><ion-icon name="{{icon3}}"></ion-icon></ion-fab-button>
+  </ion-fab-list>
+
+</ion-fab>

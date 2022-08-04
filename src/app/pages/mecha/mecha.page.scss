@@ -1,0 +1,50 @@
+.ready-message{
+    display:flex;
+    justify-content: center;
+    margin: 16px 0px;
+}
+
+.header{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.mech{
+    display:flex;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: 600;
+    &-health{
+        color:#f50029;
+    }
+    &-energy{
+        color:#3d66eb;
+        &-txt{
+            font-size:14px;
+        }
+    }
+}
+
+ion-range{
+    --bar-background: lightgray;
+    --bar-background-active: #f50029;
+}
+
+.power {
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    &-icon{
+        font-size:25px;
+        font-weight: 600;
+    }
+    &-name{
+        font-size:20px;
+        font-weight: 600;
+    }
+    &-description{
+        
+    }
+}

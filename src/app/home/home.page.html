@@ -1,20 +1,25 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title *ngIf="!selectedMech" >Welcome</ion-title>
+    <ion-title *ngIf="selectedMech" >codename: {{code}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<ion-content>
+  <div [ngClass]="{'danger' : isDanger}">
+    <div *ngIf="!selectedMech" id="container">
+      <strong>aureum_mecha_project</strong>
+        <ion-item  style="padding: 0px 20px 0px 0px;">
+          <ion-label position="floating">insert_your_code</ion-label>
+          <ion-input [(ngModel)]="code" type="text" id="input"></ion-input>
+        </ion-item>
+        <div class="ion-padding">
+          <!-- <ion-button [routerLink]="['/mecha']" routerLinkActive="router-link-active" (click)="setMech()">START</ion-button>    -->
+          <ion-button (click)="setMech()">START</ion-button>
+        </div>
+    </div>
+    <div *ngIf="selectedMech">
+      <app-mecha [code]="code" [activeMech]="activeMech" (dangerEvent)="addItem($event)"></app-mecha>
+    </div>
   </div>
 </ion-content>
