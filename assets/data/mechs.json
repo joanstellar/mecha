@@ -1,0 +1,58 @@
+[
+    {   
+        "name":"Ezzio Battaglia", 
+        "HP":"500", 
+        "MP":"5",
+        "power1_name":"Carga",
+        "power1_desc":"El próximo ataque físico será crítico independientemente de la tirada que hayas sacado.",
+        "power1_icon":"speedometer-outline",
+        "power2_name":"Embestida",
+        "power2_desc":"Recorre una distancia de hasta 100 pies en la dirección que quiera, dañando a los enemigos a su paso en 1d8 + Modificador de Fuerza",
+        "power2_icon":"enter-outline",
+        "power3_name":"Suplex",
+        "power3_desc":"Agarra a un enemigo y si hay éxito, le hace un suplex, dañandole 1d8 + Modificador de Fuerza, para que posteriormente aturdirlo.",
+        "power3_icon":"hand-left-outline"
+    },
+    {  
+        "name":"Titania", 
+        "HP":"500", 
+        "MP":"3",
+        "power1":"blabla",
+        "power2":"blabla"
+    },
+    {   
+        "name":"Samara", 
+        "HP":"500", 
+        "MP":"3",
+        "power1":"blabla",
+        "power2":"blabla"
+    },
+    {  
+        "name":"Dante", 
+        "HP":"500", 
+        "MP":"3",
+        "power1":"blabla",
+        "power2":"blabla"
+    },
+    {   
+        "name":"Milton", 
+        "HP":"500", 
+        "MP":"3",
+        "power1":"blabla",
+        "power2":"blabla"
+    },
+    { 
+        "name":"Vulcano", 
+        "HP":"500", 
+        "MP":"3",
+        "power1":"blabla",
+        "power2":"blabla"
+    },
+    {  
+        "name":"Atso", 
+        "HP":"500", 
+        "MP":"3",
+        "power1":"blabla",
+        "power2":"blabla"
+    }
+]
